@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#d1{
+			margin-left: 22px;
+			background:url(source.png) 1px 4px no-repeat;
+			cursor:pointer;
+			height:26px;
+			width:20px;
+		}
+		#d1:hover{
+			background:url(source.png) 1px -20px no-repeat;
+		}
+		#d2:hover{
+			background-color:green;
+		}
+		#ds{
+			position: absolute;
+			left:115px;
+			top:12.8px;
+			background:url(source.png) 1px -60px no-repeat;
+			width: 16px;
+			height: 20px;
+			border-right: 1px solid #ccc;
+			display: none;
+			z-index: 999;
+			cursor:default;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			t1.onkeyup=function(){
+				ds.style.display="block";
+				if(t1.value==''){
+					ds.style.display='none';
+				}
+				
+			}
+			ds.onclick=function(){
+				t1.value='';
+				ds.style.display='none';	
+			}
+		}
+	</script>
+</head>
+<body>
+<div style="">
+	<input type="text" style="border:1px #ccc solid;border-right:none;width:108px;height:25px;outline: none;" id="t1">
+	<div  id="ds">&nbsp;&nbsp;</div>
+	<div style="cursor:default;display:inline;width:50px;height:27px;position: absolute;left:128.7px;top:8px;border:1px solid #ccc;border-left:none;margin-left:-12px">
+	<div  id="d1">
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+	</div>
+</div>
+</body>
+</html>
